@@ -59,7 +59,7 @@ def plot(img, res, bbox=True, labels=True):
 
 
 if __name__ == '__main__':
-    path = os.path.join('img', 'SJ.jpg')
+    path = os.path.join('img', 'GwangGuo', 'GW001.jpg')
 
     im_input = load_input(path)
     h, w, c = im_input.shape
