@@ -45,7 +45,4 @@ if __name__ == '__main__':
     # json_string = json.dumps([ob.__dict__ for ob in cars])
     with open(FILE_PATH, 'w') as outfile:
         json.dump(result, outfile, indent=4)
-
-
-
-    import pdb; pdb.set_trace()
+    print("Saved {} cars at {}".format(len(cars), FILE_PATH))
