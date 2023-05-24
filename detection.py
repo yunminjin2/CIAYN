@@ -7,14 +7,8 @@ import numpy as np
 import random
 
 import util
+from util import palette
 
-
-
-palette = np.array([[255, 128, 0], [255, 153, 51], [255, 178, 102], [230, 230, 0], [255, 153, 255],
-                    [153, 204, 255], [255, 102, 255], [255, 51, 255], [102, 178, 255], [51, 153, 255],
-                    [255, 153, 153], [255, 102, 102], [255, 51, 51], [153, 255, 153], [102, 255, 102],
-                    [51, 255, 51], [0, 255, 0], [0, 0, 255], [255, 0, 0], [255, 255, 255]],
-                    dtype=np.uint8)
 
 def draw_labels(img, p1, p2, label, int_label):
     w, h = cv2.getTextSize(label, 0, fontScale=3 / 3, thickness=1)[0]  # text width, height
@@ -25,7 +19,7 @@ def draw_labels(img, p1, p2, label, int_label):
         0,
         1,
         palette[int_label].tolist(),
-        thickness=1,
+        thickness=2,
         lineType=cv2.LINE_AA
     )
     return img
@@ -54,7 +48,7 @@ if __name__ == '__main__':
     cls_model = YOLO('yolov8l.pt')
     path = os.path.join('img', 'GwangGuo', 'GW001.jpg')
 
-    im_input = util.load_input(path)
+    im_input, _, _ = util.load_input(path)
     res = cls_model(im_input)
 
     res_img = plot(im_input, res)
