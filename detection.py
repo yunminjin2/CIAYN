@@ -32,6 +32,7 @@ def draw_labels(img, p1, p2, label, int_label):
 
 
 def plot(img, res, bbox=True, labels=True):
+    h, w, c = img.shape
     label_dict = res[0].names
     if bbox:
         boxes = res[0].boxes.cpu().numpy()
@@ -54,7 +55,6 @@ if __name__ == '__main__':
     path = os.path.join('img', 'GwangGuo', 'GW001.jpg')
 
     im_input = util.load_input(path)
-    h, w, c = im_input.shape
     res = cls_model(im_input)
 
     res_img = plot(im_input, res)
