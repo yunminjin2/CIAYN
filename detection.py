@@ -6,24 +6,15 @@ import numpy as np
 
 import random
 
-cls_model = YOLO('yolov8l.pt')
+import util
+
+
 
 palette = np.array([[255, 128, 0], [255, 153, 51], [255, 178, 102], [230, 230, 0], [255, 153, 255],
                     [153, 204, 255], [255, 102, 255], [255, 51, 255], [102, 178, 255], [51, 153, 255],
                     [255, 153, 153], [255, 102, 102], [255, 51, 51], [153, 255, 153], [102, 255, 102],
                     [51, 255, 51], [0, 255, 0], [0, 0, 255], [255, 0, 0], [255, 255, 255]],
                     dtype=np.uint8)
-
-
-def load_input(path):
-    im = cv2.imread(path)  # OpenCV
-    
-    # t = cv2.resize(im, (640, 640))
-    print('img loaded')
-
-    return im
-
-
 
 def draw_labels(img, p1, p2, label, int_label):
     w, h = cv2.getTextSize(label, 0, fontScale=3 / 3, thickness=1)[0]  # text width, height
@@ -59,9 +50,10 @@ def plot(img, res, bbox=True, labels=True):
 
 
 if __name__ == '__main__':
+    cls_model = YOLO('yolov8l.pt')
     path = os.path.join('img', 'GwangGuo', 'GW001.jpg')
 
-    im_input = load_input(path)
+    im_input = util.load_input(path)
     h, w, c = im_input.shape
     res = cls_model(im_input)
 
