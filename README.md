@@ -1,5 +1,5 @@
 # CIAYN
-### CCTV_Is_ALL_You_Need
+## CCTV_Is_ALL_You_Need
 
 -----------
 
@@ -11,6 +11,17 @@ Authorized [Minje Kim](https://yunminjin2.github.io/)
 
 -----------
 
+# Table of Contents
+1. [Getting Started]
+        
+    1.1. [Environments]
+    
+    1.2. [How to Test]
+
+2. [Introduction]
+3. [Method]
+4. [Results]
+
 ## Getting Started
 
 Start by cloning the repo:
@@ -18,13 +29,13 @@ Start by cloning the repo:
         git clone https://github.com/yunminjin2/CIAYN.git
         cd CIAYN
 
-## Environment
+### Environment
 
 * Python >= 3.8
 
         pip install -r requirements.txt
 
-## How to Test
+### How to Test
 
 We provide sample images, gps <-> pixel mapping and masking regions
 
