@@ -1,6 +1,5 @@
 from ultralytics import YOLO
 import cv2
-import torch
 import os
 import numpy as np
 
