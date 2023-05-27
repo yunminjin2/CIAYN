@@ -12,15 +12,15 @@ Authorized [Minje Kim](https://yunminjin2.github.io/)
 -----------
 
 # Table of Contents
-1. [Getting Started](https://github.com/yunminjin2/CIAYN/blob/main/README.md#getting-started)
+1. [Getting Started](https://github.com/yunminjin2/CIAYN#getting-started)
         
-    1.1. [Environments](https://github.com/yunminjin2/CIAYN/blob/main/README.md#environments)
+    1.1. [Environments](https://github.com/yunminjin2/CIAYN#environments)
     
-    1.2. [How to Test](https://github.com/yunminjin2/CIAYN/blob/main/README.md#how-to-test)
+    1.2. [How to Test](https://github.com/yunminjin2/CIAYN#how-to-test)
 
-2. [Introduction](https://github.com/yunminjin2/CIAYN/blob/main/README.md#introduction)
-3. [Method](https://github.com/yunminjin2/CIAYN/blob/main/README.md#method)
-4. [Results](https://github.com/yunminjin2/CIAYN/blob/main/README.md#results)
+2. [Introduction](https://github.com/yunminjin2/CIAYN#introduction)
+3. [Method](https://github.com/yunminjin2/CIAYN#method)
+4. [Results](https://github.com/yunminjin2/CIAYN#results)
 
 ## Getting Started
 
