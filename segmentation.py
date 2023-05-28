@@ -219,6 +219,7 @@ def plot_bboxes(image, boxes, masks, labels=[], colors=[], score=True, conf=None
             )
         else:
             label = labels[int(box[-1]) + 1]
+        label=""
         # filter every box under conf threshold if conf threshold setted
         if conf:
             if box[-2] > conf:

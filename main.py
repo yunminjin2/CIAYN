@@ -9,6 +9,7 @@ from collections import defaultdict
 import util
 import detection
 from car import IPCar
+from segmentation import plot_bboxes
 
 
 class GPS2Pixel:
@@ -199,9 +200,10 @@ if __name__=='__main__':
     elif opt.compression == "rectangle_crop":
         thresholding=True
 
-    cls_model = YOLO('yolov8l.pt')
+    cls_model = YOLO('yolov8x-seg.pt')
 
     res = cls_model(input_im)
+    input_im = plot_bboxes(input_im, res[0].boxes.data, res[0].masks)
 
     mapper = Vision2IP(input_im, grid_data, car_data)
     mapper.convert_gps2pixel()
@@ -228,4 +230,5 @@ if __name__=='__main__':
     if opt.display:
         cv2.imshow('img', res_img)
         cv2.waitKey(0)
-        # cv2.imwrite(os.path.join('ip_img', road_path + '.jpg'), res_img)
+        # cv2.imwrite(os.path.join('res_img', road_path + '.jpg'), res_img)
+        cv2.imwrite("res.jpg", res_img)
