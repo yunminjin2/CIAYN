@@ -150,7 +150,7 @@ def plot(img, car_dict, threshold, mask, thresholding=False, masking=False, bbox
                 num_pixels += h*w
             num_cars += 1
 
-    data_size = num_pixels*2*8 # x,y with float32 (8 byte)
+    data_size = num_pixels*2*32 # x,y with float32 (32 bits)
     print(data_size)
     print(num_cars)
     print(data_size/num_cars)
@@ -228,7 +228,7 @@ if __name__=='__main__':
         res_img = cv2.bitwise_and(res_img, res_img, mask=mask)
 
     if opt.display:
-        cv2.imshow('img', res_img)
-        cv2.waitKey(0)
+        # cv2.imshow('img', res_img)
+        # cv2.waitKey(0)
         # cv2.imwrite(os.path.join('res_img', road_path + '.jpg'), res_img)
         cv2.imwrite("res.jpg", res_img)
